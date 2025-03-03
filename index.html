@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG-Controlled Bouncing Ball</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 3px solid black; background-color: lightgray; }
+        #eegDisplay, #gameTime, #highScore { font-size: 18px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h2>EEG-Controlled Bouncing Ball</h2>
+    <p>Do any activity to boost speed!</p>
+    <canvas id="gameCanvas" width="900" height="500"></canvas>
+    <p id="eegDisplay">EEG Status: Normal</p>
+    <p id="gameTime">Game Time: 0s</p>
+    <p id="highScore">Highest Record: 0s</p>
+
+    <script src="eeg.js"></script>  <!-- EEG Input -->
+    <script src="game.js"></script> <!-- Game Logic -->
+</body>
+</html>
