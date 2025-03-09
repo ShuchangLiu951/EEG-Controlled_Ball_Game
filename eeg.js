@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws://localhost:8080"); // Connect to OpenBCI server
+const ws = new WebSocket("ws://localhost:8080"); // Connect to the Python WebSocket
 
 let defaultSpeed = 0.5;
 let boostSpeed = 2.0;
@@ -6,9 +6,10 @@ let currentSpeed = defaultSpeed;
 
 ws.onmessage = (event) => {
     let data = JSON.parse(event.data);
-    let activityDetected = data.blink; // Blink or chewing detected?
+    console.log(data)
+    let activityDetected = data.blink; // Blink detection from Python WebSocket
 
-    // If detected, update speed and status
+    // If detected, update ball speed
     currentSpeed = activityDetected ? boostSpeed : defaultSpeed;
     setBallSpeed(currentSpeed);
 
