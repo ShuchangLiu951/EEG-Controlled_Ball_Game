@@ -80,7 +80,7 @@ while running:
 
     current_time = time.time()
 
-    # 🛑 Blink Detection (Stop for 3 Seconds)
+    # 🛑 Blink Detection (Stop for 1 Seconds)
     if blink_signal > BLINK_THRESHOLD and not blink_active:
         blink_active = True
         blink_start_time = current_time  
