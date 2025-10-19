@@ -1,0 +1,1 @@
+We developed an EEG-Controlled Ball Game where brain activity determines movement, acceleration, and stopping. Our system processes EEG signals by applying high-pass filtering, feature extraction, and calibrated thresholds for control. By mapping brain signals to gameplay mechanics, we created an interactive, responsive experience without the need for physical input.
